@@ -74,7 +74,6 @@ A api verifica se a senha enviada esta possui os seguintes parametros:
 		"resposta": false
 	}
 ```
-
 ## Para executar os testes unitarios
  
 - Dentro da pasta de teste **app>tests** rodar o comando: 
