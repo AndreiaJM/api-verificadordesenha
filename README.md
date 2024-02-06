@@ -13,11 +13,20 @@ A api verifica se a senha enviada esta possui os seguintes parametros:
 - Não possuir caracteres repetidos dentro do conjunto
 - Espaços em branco não devem ser considerados como caracter
 
+## Ferramentas usadas no projeto
+
+- Python 3.11
+- Framework Flask 1.1.4
+- IDE Pycharm
+- pytest
+- flask-swagger-ui 3.36.0
+
 ## Pré requisitos para rodar o projeto
 
 - Python 3.11
+- IDE
 
-## Como executar o projeto
+## Como executar o projeto localmente
 
 - Clonar o projeto localmente
 - Abrir com a IDE de sua preferecia (indicado Pycharm)
@@ -46,37 +55,53 @@ A api verifica se a senha enviada esta possui os seguintes parametros:
 ```sh
   Flask run
 ```
-## Usuabilidade
 
 - Api foi desenvolvida com framework Flask e roda na porta padrão: http://127.0.0.1:5000
-- Rotas: 
+- **Rotas**: 
 
-**[POST]**
+**[POST]  /senha**
+
 ```sh
   http://127.0.0.1:5000/senha
 ```
-- Recebe um JSON via body, exemplo: 
+- A rota /senha Recebe um JSON via body
+- **Parametros de entrada:**
+  - senha: string
+
+- **Retorno**: 
+  - resposta: boolean
+  
+- Exemplo de entrada:
 ```sh
   	{
 		"senha": "AbTp9!fok"
 	}
 ```
 - Caso a senha recebida corresponda ao padrão a API retorna **true**, caso nao retorna **false**
-- Exemplo de saída caso corresponda ao padrão:
+
+
+- Exemplo de saída caso a senha corresponda ao padrão:
 ```sh
   	{
 		"resposta": true
 	}
 ```
-- Exemplo de saída não corresponda ao padrao:
+- Exemplo de saída caso senha não corresponda ao padrão:
 ```sh
   	{
 		"resposta": false
 	}
 ```
+
 ## Para executar os testes unitarios
  
 - Dentro da pasta de teste **app>tests** rodar o comando: 
 ```sh
   pytest
+```
+## Documentação
+ 
+- Apos executar o projeto localmente você tambem consegue acessar a documentação Swagger através da url:  
+```sh
+  http://127.0.0.1:5000/api/docs/
 ```
