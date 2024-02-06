@@ -29,8 +29,13 @@ A api verifica se a senha enviada esta possui os seguintes parametros:
 ## Como executar o projeto localmente
 
 - Clonar o projeto localmente
-- Abrir com a IDE de sua preferecia (indicado Pycharm)
+- Abrir com a IDE Pycharm
+- Selecionar a pasta app como diretorio principal: 
+```sh 
+  clicar com o botão direito na pasta app> Mark Diretory as > Sources Root
+```
 - Criar um ambiente virtual para isolar as instalações do projeto através do comando:
+
 ```sh 
   python -m venv nome-do-ambiente
 ```
@@ -44,12 +49,23 @@ A api verifica se a senha enviada esta possui os seguintes parametros:
 ```sh
   source nome-do-ambiente/bin/activate
 ```
+- Selecionar o ambiente virtual para que o pycharm reconheça:
+```sh
+  Menu > File > Settings > Python Interpreter > Add Interpreter > Existing
+
+  Selecionar o seu ambiente virtual e dar ok
+```
+- Você tambem pode criar seu ambiente virtual atráves da propria IDE:
+```sh
+  Menu > File > Settings > Python Interpreter > Add Interpreter > New > Ok > 
+
+```
 
 - Ao executar o comando de ativação você vera o nome do ambiente virtual aparecendo no terminal indicando que esta ativo.
 
 - Agora dentro do ambiente virtual você pode fazer a instalação das dependencias do projeto, **dentro da pasta app** executar do comando: 
 ```sh
-  pip install requirements.txt
+  pip install -r requirements.txt
 ```
 - Agora com as dependencias instaladas podemos rodar o projeto através do comando: 
 ```sh
